@@ -1,0 +1,71 @@
+﻿@model PruebaSoporteLogico.Models.Empleado
+@{
+    ViewData["Title"] = "Crear";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<form method="post" asp-action="Crear">
+    <div class="border p-3">
+
+        <div asp-validation-summary="ModelOnly" class="text-danger">
+
+        </div>
+
+        <div class="form-group row">
+            <h2 class="text-info pl-3">NUEVO EMPLEADO</h2>
+        </div>
+
+         <div class="container">
+             <div class="row">
+                 <div class="col md-6">
+                     <label asp-for="Nombres" class="form-label">Nombres</label>
+                     <input asp-for="Nombres" class="form-control"/>
+                     <span asp-validation-for="Nombres" class="text-danger"></span>
+                 </div>
+             </div>
+             <div class="row">
+                 <div class="col md-6">
+                     <label asp-for="Apellidos" class="form-label">Apellidos</label>
+                     <input asp-for="Apellidos" class="form-control"/>
+                     <span asp-validation-for="Apellidos" class="text-danger"></span>
+                 </div>
+             </div>
+             <div class="row">
+                 <div class="col md-6">
+                     <label asp-for="Direccion" class="form-label">Direccion</label>
+                     <input asp-for="Direccion" class="form-control"/>
+                     <span asp-validation-for="Direccion" class="text-danger"></span>
+                 </div>
+             </div>
+             <div class="row">
+                 <div class="col md-6">
+                     <label asp-for="Email" class="form-label">Email</label>
+                     <input asp-for="Email" class="form-control"/>
+                     <span asp-validation-for="Email" class="text-danger"></span>
+                 </div>
+             </div>
+             <div class="row">
+                 <div class="col md-6">
+                     <label asp-for="IdGenero" class="form-label">IdGenero</label>
+                     <input asp-for="IdGenero" class="form-control"/>
+                     <span asp-validation-for="IdGenero" class="text-danger"></span>
+                 </div>
+             </div>
+             <div class="row">
+                 <div class="col md-6">
+                     <label asp-for="IdCiudad" class="form-label">IdCiudad</label>
+                     <input asp-for="IdCiudad" class="form-control"/>
+                     <span asp-validation-for="IdCiudad" class="text-danger"></span>
+                 </div>
+             </div>
+             <br />
+             <div class="d-grid gap-2 d-md-block">
+                 <button type="submit" class="btn btn-primary">Crear Nueva</button>
+                 <a asp-controller="Empleado" asp-action="Index" class="btn btn-success">Regresar</a>
+
+             </div>
+         </div>
+    </div>
+
+</form>
+
